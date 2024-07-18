@@ -7,7 +7,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits import mplot3d
-
+slow_converg = 0.001
+fast_converg = 0.1
+ossil_coverg = 0.5
 fig = plt.figure()
 
 sample_count = 100
@@ -46,7 +48,7 @@ def grad(aa):
 aa = np.array([-4, 4])
 delta = np.inf
 epsilon = 0.001
-learn_rate = 0.01
+learn_rate = ossil_coverg
 step_count = 0
 ax2.scatter(aa[0], aa[1], penalty(aa[0],aa[1]), c='b', s=100, marker='*')
 # Update vector aa
